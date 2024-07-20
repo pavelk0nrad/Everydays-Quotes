@@ -17,6 +17,7 @@ function createCard(content) {
 }
 
 function App() {
+  const countOfQuotes = motivationalQuotes.length;
   const [filteredQuotes, setFilteredQuotes] = useState(motivationalQuotes);
 
   function generateScoreFromDayAndMonth() {
@@ -29,7 +30,7 @@ function App() {
     const normalizedMonth = month / 11; // Měsíc (0 - 11) na (0 - 1)
 
     // Výpočet skóre jako vážený průměr
-    const score = (normalizedDayOfWeek + normalizedMonth) / 2 * 100;
+    const score = (normalizedDayOfWeek + normalizedMonth) / 2 * countOfQuotes;
 
     return Math.round(score);
   }
