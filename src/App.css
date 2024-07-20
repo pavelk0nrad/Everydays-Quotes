@@ -61,9 +61,21 @@ h2{
 .display-quote{
     font-size: 2em;
     font-style: italic;
+    background-color: #5c5c5c8e;
+    border-radius: 10px;
+    padding: 20px; 
 }
 .container{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.finding-box{
+    list-style: none;
+    text-align: left;
+    color: #ffffff8e;
+    background-color: rgba(98, 98, 98, 0.149);
+    border-radius: 10px;
+    padding: 10px;
 }
