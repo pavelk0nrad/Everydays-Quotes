@@ -30,19 +30,24 @@ function Finding({ onSearch, authors }) {
   };
 
   return (
-    <div>
-      <label htmlFor="searchInput">🔍 </label>
+
+    <div className="finding-form">
+ 
       <input
         type="text"
         id="searchInput"
         value={searchTerm}
+        placeholder="Vyhledávání podle autorů"
         onChange={handleInputChange}
       />
+     
       <input
         type="button"
         value="Search"
         onClick={handleSearch}
       />
+
+      
       {suggestions.length > 0 && (
         <ul className="finding-box">
           {suggestions.map((suggestion, index) => (
@@ -51,8 +56,9 @@ function Finding({ onSearch, authors }) {
             </li>
           ))}
         </ul>
+        
       )}
-    </div>
+ </div>
   );
 }
 

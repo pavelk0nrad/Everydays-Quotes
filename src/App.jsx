@@ -48,15 +48,23 @@ function App() {
 
   return (
     <div className='container'>
+      <div className="hero">
       <h1 className='display'>Citáty na každý den</h1>
       <div className='today-quotes'>
-        <p>Dnešní citát:</p>
+        <div className="card-header">
+          <h2>Dnešní citát:</h2>
+        </div>
         <p className='display-quote'>{motivationalQuotes[result].quote}</p>
         <p>{motivationalQuotes[result].author}</p>
         <hr />
+        </div>
+        <div className="main">
         <p>Co je smyslem citátů na každý den? Každý den ti algoritmus vybere náhodný citát z databáze. I když stránku obnovíš, tento citát ti pro tebe osud vybral na dnešní den. Musíš se jím tedy řídit.</p>
-        <p>Pakliže jsi netrpělivý, prohlédni si zatím databázi citátů níže.</p>
-        <Finding onSearch={handleSearch} authors={authors} />
+          <div className="finder">
+              
+              <Finding onSearch={handleSearch} authors={authors} />
+          </div>
+        </div>
       </div>
       <div className="quotes-grid">
         {filteredQuotes.map(createCard)}
